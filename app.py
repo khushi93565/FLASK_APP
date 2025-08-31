@@ -18,11 +18,11 @@ def login():
  
     return'''
             <h2> Login Page</h2>
-            <form.method="POST">
+            <form method="POST">
             username: <input type="text"  name="username"><br>
             password: <input type="text"   name="password"><br>
-            <input type="submit" values="Login"
-            </from>
+            <input type="submit" value="Login">
+            </form>
 
 '''
 #welcome page(after/ login)
@@ -40,3 +40,5 @@ def welcome():
 def logout():
     session.pop("user")   #session["user"]="khushi"
     return redirect(url_for("login"))
+
+app.run(debug=True)
